@@ -1,0 +1,14 @@
+
+<!DOCTYPE html>
+<html lang="pt-br" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
+  {% include head.html %}
+  <body>
+    <div class="container">
+      {% include header.html %}
+      <div class="post-container">
+        {{ content }}
+      </div>
+      {% include footer.html %}
+    </div>
+  </body>
+</html>

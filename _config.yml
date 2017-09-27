@@ -1,0 +1,53 @@
+# Site settings
+title: Wilson Junior Blog
+description: Blog de um desenvolvedor de software e apaixonado por tecnologia.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# User settings
+username: Wilson Junior
+tagline: Blog de Desenvolvimento
+user_description: Blog de um desenvolvedor e apaixonado por tecnologia.
+email: contato@wilsonjunior.net
+github_username:  wilsonjuniorwj
+
+google-ID: 'UA-106774456-1'
+
+social:
+- {icon: 'facebook', link: 'https://www.facebook.com/wilsonjunior.net'}
+- {icon: 'github', link: 'https://github.com/wilsonjuniorwj'}
+- {icon: 'globe', link: 'https://wilsonjunior.net/'}
+- {icon: 'envelope', link: 'mailto:contato@wilsonjunior.net'}
+- {icon: 'rss-square', link: 'https://blog.wilsonjunior.net/feed.xml'}
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Arquivos
+    url: /archive
+  - title: Tags
+    url: /tags
+  - title: Sobre
+    url: /about
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+plugins: [jekyll-paginate, jekyll-feed]
+paginate: 5
+
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+path: feed.xml
+
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby']

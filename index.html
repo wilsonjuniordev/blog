@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+{% for post in paginator.posts %}
+<div class="posts">
+  <h1>
+    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+  </h1>
+  {% if post.image %}
+    <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}/assets/img/{{ post.image }}"></a>
+  {% endif %}
+
+
+  <p>
+    {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.baseurl }}{{ post.url }}">Leia mais</a>
+
+    {% if site.tags %}
+    <div>
+      {% for tag in post.tags %}
+      <a href="{{ site.url }}/tags/#{{ tag | slugify }}" class="tag-link">#{{tag}}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <span class="post-date" style="margin-top:3px">
+      <i class="fa fa-calendar" aria-hidden="true"></i> 
+      {% include date.html date=post.date %}
+      - <i class="fa fa-clock-o" aria-hidden="true"></i> 
+      {% include read-time.html %}
+    </span>
+  </p>
+
+</div>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+
+  {% if paginator.previous_page %}
+    <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">Posts Novos</a>
+  {% else %}
+      <span class="pagination-button">Posts Novos</span>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a class="pagination-button pagination-active" href="{{ site.url }}{{ paginator.next_page_path }}" class="next">Posts Antigos</a>
+  {% else %}
+    <span class="pagination-button">Posts Antigos</span>
+  {% endif %}
+
+</div>
