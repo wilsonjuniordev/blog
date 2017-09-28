@@ -1,4 +1,4 @@
-# [wilsonjunior.net](https://wilsonjunior.net/) <img src="https://github.com/wilsonjuniorwj/blog/blob/master/assets/img/icons/favicon-16x16.png">
+# [blog.wilsonjunior.net](https://blog.wilsonjunior.net/) <img src="https://github.com/wilsonjuniorwj/blog/blob/master/assets/img/icons/favicon-16x16.png">
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/wilsonjuniorwj/blog/master/LICENSE)
 
