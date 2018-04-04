@@ -27,3 +27,5 @@ gulp
 ## License
 
 It is free under the [open-source MIT license](/LICENSE).
+
+Theme adapted from [Lagrange](https://github.com/LeNPaul/Lagrange)
