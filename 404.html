@@ -1,24 +1,26 @@
 ---
-layout: default
+title: "404 | Wilson Junior Blog"
+permalink: 404.html
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="pt-br" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
+  {% include head.html %}
+  <body>
+        <style type="text/css" media="screen">
+          .container {
+            margin: 0px auto;
+            max-width: 600px;
+            text-align: center;
+            padding-top: 60px;
+          }
+        </style>
+        
+        <div class="container">
+          <img src="/assets/img/404.gif" width="100%" alt="404 - Página não encontrada">
+          <p><strong>Página não encontrada :/</strong></p>
+          <p>Sinto muito, parece que a página que você estava procurando não foi encontrada. Volte para a <a href="{{ site.baseurl }}/">Página Principal</a> ou vá para <a href="{{ site.baseurl }}/archive">Arquivos</a>.</p>
+        </div>
 
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+  </body>
+</html>
