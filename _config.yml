@@ -37,6 +37,8 @@ permalink: /:title/
 plugins: [jekyll-paginate, jekyll-feed]
 paginate: 5
 
+# website under construction
+var_website_construction: true
 
 # html minify
 compress_html:
