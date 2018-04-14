@@ -10,14 +10,18 @@ tagline: Blog de Desenvolvimento
 user_description: Blog de um desenvolvedor e apaixonado por tecnologia.
 email: contato@wilsonjunior.net
 github_username:  wilsonjuniorwj
+facebook_username: wilsonjunior.net
+twitter_username: wilsonjuniorwj
+linkedin_username: wilsonjuniorwj
+disqus_username: wilsonjuniorwj
 
 google-ID: 'UA-106774456-1'
 
 social:
-- {icon: 'facebook', link: 'https://www.facebook.com/wilsonjunior.net'}
 - {icon: 'github', link: 'https://github.com/wilsonjuniorwj'}
-- {icon: 'globe', link: 'https://wilsonjunior.net/'}
+- {icon: 'globe', link: 'https://wilsonjunior.net'}
 - {icon: 'envelope', link: 'mailto:contato@wilsonjunior.net'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/wilsonjuniorwj'}
 - {icon: 'rss-square', link: 'https://blog.wilsonjunior.net/feed.xml'}
 
 # Links to include in menu navigation
