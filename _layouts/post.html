@@ -7,7 +7,7 @@ layout: default
 </h1>
 
 {% if page.image %}
-  <img src="{{ site.baseurl }}/assets/img/{{ page.image }}">
+  <img src="{{ site.baseurl }}/assets/img/articles/{{ page.image }}" style="filter: opacity(50%) grayscale(100%);">
 {% endif %}
 
 {{ content }}
@@ -34,6 +34,10 @@ layout: default
 
 {% include social-sharing.html %}
 
-{% include related-posts.html %}
+{% include author.html %}
+
+{% comment %} {% include related-posts.html %} {% endcomment %}
+
+{% include next-prev-post.html %}
 
 {% include comments.html %}
