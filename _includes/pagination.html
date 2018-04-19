@@ -1,0 +1,36 @@
+{% if paginator.total_pages < 3%}
+
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">Posts Novos</a>
+        {% else %}
+        <span class="pagination-button">Posts Novos</span>
+        {% endif %} {% if paginator.next_page %}
+        <a class="pagination-button pagination-active" href="{{ site.url }}{{ paginator.next_page_path }}" class="next">Posts Antigos</a>
+        {% else %}
+        <span class="pagination-button">Posts Antigos</span>
+        {% endif %}
+    </div>
+
+{% else %}
+    {% if paginator.total_pages > 1 %}
+    <nav class="pagination" role="navigation">
+        {% if paginator.previous_page %}
+        <a class="newer-posts" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" style="margin-right: 1em">&laquo; Anterior</a>
+        {% else %}
+        <span class="newer-posts" style="margin-right: 1em; opacity: .2">&laquo; Anterior</span>
+        {% endif %} {% for page in (1..paginator.total_pages) %} {% if page == paginator.page %}
+        <em class="page-number">{{ page }}</em>
+        {% elsif page == 1 %}
+        <a class="page-number" href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+        {% else %}
+        <a class="page-number" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+        {% endif %} {% endfor %} {% if paginator.next_page %}
+        <a class="older-posts" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" style="margin-left: 1em">Próxima &raquo;</a>
+        {% else %}
+        <span class="older-posts" style="margin-right: 1em; opacity: .2">Próxima &raquo;</span>
+        {% endif %}
+    </nav>
+    {% endif %}
+
+{% endif %}
