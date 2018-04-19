@@ -1,0 +1,22 @@
+{% if site.display-next-prev-post and page.previous.url or site.display-next-prev-post and page.next.url %}
+<nav id="article-nav">
+
+    {% if page.next.url %}
+      <a href="{{ page.next.url | prepend: site.baseurl }}" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">‹ {{ site.var_next_post }}</strong>
+        <div class="article-nav-title">
+          {{ page.next.title }}
+        </div>
+      </a>
+    {% endif %}
+
+    {% if page.previous.url %}
+      <a href="{{ page.previous.url | prepend: site.baseurl }}" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">{{ site.var_previous_post }} ›</strong>
+        <div class="article-nav-title">
+          {{ page.previous.title }}
+        </div>
+      </a>
+    {% endif %}
+</nav>
+{% endif %}
