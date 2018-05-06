@@ -180,6 +180,172 @@ blockquote p {
 }
 
 /*
+  Next-Prev Posts
+*/
+
+#article-nav {
+  position: relative;
+}
+
+#article-nav:before,
+#article-nav:after {
+  content: "";
+  display: table;
+}
+
+#article-nav:after {
+  clear: both;
+}
+
+.article-nav-link-wrap {
+  text-decoration: none;
+  text-shadow: 0 1px #fff;
+  color: #999;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 50px;
+  text-align: center;
+  display: block;
+}
+
+.article-nav-link-wrap:hover {
+  color: black;
+}
+
+@media screen and (min-width: 768px) {
+  .article-nav-link-wrap {
+    width: 50%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #article-nav-newer {
+    float: left;
+    text-align: right;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #article-nav-older {
+    float: right;
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+.article-nav-caption {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #999;
+  line-height: 1em;
+}
+
+#article-nav-newer .article-nav-caption {
+  margin-right: -2px;
+}
+
+.article-nav-title {
+  font-size: 0.85em;
+  line-height: 1.6em;
+  margin-top: 0.5em;
+}
+
+/*
+  Author Post
+*/
+.author{
+    background:#f2f2f2;
+    display:table;
+    width:100%;
+    padding:.5rem 0;
+    margin:.5rem 0;
+}
+
+@media only screen and (min-width:37.5rem){
+    .author{
+        padding:.5rem 0
+    }
+}
+
+.author .details{
+    margin:auto;
+    max-width:50rem;
+    padding:0 0.25rem;
+}
+
+@media only screen and (max-width:37.5rem){
+    .author .details{
+        text-align:center
+    }
+}
+
+.author img{
+    width: 75px;
+    height: 75px;
+    border-radius:50%;
+    display:block;
+    margin:auto;
+}
+
+@media only screen and (min-width:37.5rem){
+    .author img{
+        float:left;
+        margin-right:3.125rem
+    }
+}
+
+.author .def{
+    color:#808080;
+    font-size:1rem;
+    font-weight:300;
+    font-style:normal;
+}
+
+@media only screen and (min-width:37.5rem){
+    .author .def{
+        margin:0;
+    }
+}
+
+.author .name{
+    margin:0;
+}
+
+.author .name a{
+    font-weight:800;
+    font-style:normal;
+    text-decoration:none;
+    color:#000;
+    font-size:1rem;
+}
+
+.author .name a:hover{
+    color:#005f97
+}
+
+@media only screen and (min-width:37.5rem){
+    .author .name a{
+        font-size:1rem
+    }
+}
+
+.author .desc{
+    font-weight:300;
+    font-size:1rem;
+    margin:0;
+}
+
+@media only screen and (min-width:37.5rem){
+    .author .desc{
+        font-size:1rem
+    }
+}
+
+/*
   Pagination
 */
 
@@ -378,6 +544,19 @@ a:hover .badge {
 
 .fa-facebook:hover {
 	color: #3b5998;
+}
+
+.fa-linkedin {
+  padding: 5px;
+	-o-transition:.5s;
+  	-ms-transition:.5s;
+  	-moz-transition:.5s;
+  	-webkit-transition:.5s;
+  	transition: .5s;
+}
+
+.fa-linkedin:hover {
+	color: #4875B4;
 }
 
 .fa-github {
