@@ -10,7 +10,7 @@ layout: default
       <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
     </h1>
     {% if post.image %}
-      <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}/assets/img/{{ post.image }}"></a>
+      <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}/assets/img/articles/{{ post.image }}"></a>
     {% endif %}
 
 
@@ -38,6 +38,7 @@ layout: default
 
   <!-- Pagination links -->
   {% include pagination.html %}
+  
 {% else %}
   {% include construction.html %}
 {% endif %}
