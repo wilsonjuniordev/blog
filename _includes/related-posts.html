@@ -1,25 +1,44 @@
 <div class="related">
 
-  <h3>Posts relacionados:</h3>
 
-  {% assign listed_posts_urls = page.url | split: ' ' %}
-
-  <ul class="related-posts">
-    {% for tag in page.tags %}
-      {% for mypost in site.tags[tag] limit:2 %}
-        {% if listed_posts_urls contains mypost.url %}
-        {% else %}
-          <li>
-            <h4>
-              <a href="{{ site.github.url }}{{ mypost.url }}">
-                {{ mypost.title }}
-              </a>
-            </h4>
-          </li>
-          {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
-        {% endif %}
+  <section class="related-posts">
+      <h3 class="related-post_title">Posts relacionados</h3>
+      {% assign maxRelatedCounter  = 0 %}
+  
+  
+      {% for post in site.posts %}
+          {% if post.url != page.url %}
+              {% if post.main-class == page.main-class %}
+                  <li class="related-post">
+                      <a href="{{ post.url }}" onclick="ga('send', 'event', 'related', 'above', '{{page.main-class}}')">{{ post.title }}</a>
+                  </li>
+                  {% assign maxRelatedCounter  = maxRelatedCounter | plus: 1 %}
+                  {% if maxRelatedCounter == 4 %}
+                      {% break %}
+                  {% endif %}
+              {% endif %}
+          {% endif %}
       {% endfor %}
-    {% endfor %}
-  </ul>
-
-</div>
+  
+  </section>
+  
+    {% comment %} <h1 >Você também pode pode gostar:</h1>
+    {% assign listed_posts_urls = page.url | split: ' ' %}
+    <ul class="related-posts">
+      {% for tag in page.tags %}
+        {% for mypost in site.tags[tag] limit:3 %}
+          {% if listed_posts_urls contains mypost.url %}
+          {% else %}
+              <h3>
+                <a href="{{ site.github.url }}{{ mypost.url }}">
+                  {{ mypost.title }}
+                </a>
+              </h3>
+            </li>
+            {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul> {% endcomment %}
+  
+  </div>

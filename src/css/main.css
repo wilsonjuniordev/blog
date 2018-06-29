@@ -179,6 +179,10 @@ blockquote p {
   text-decoration: none;
 }
 
+.related-post_title {
+  margin-bottom: 10px;
+}
+
 /*
   Next-Prev Posts
 */
