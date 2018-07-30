@@ -7,29 +7,33 @@
     <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <!-- Google Authorship Markup -->
-    <link rel="author" href="https://plus.google.com/+{{site.gplus_username}}?rel=author">
+   <link rel="author" href="https://plus.google.com/+{{site.gplus_username}}?rel=author">
 
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{site.twitter_username}}">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"> {% if page.image %}
-    <meta property="twitter:image:src" content="{{ site.url }}{{ site.baseurl }}{{page.image }}"> {% else %}
-    <meta property="twitter:image:src" content="{{ " /assets/img/blog-image.png
-        " | prepend: site.baseurl | prepend: site.url }}"> {% endif %}
+    <meta property="twitter:image:src" content="{{ site.url }}{{page.image }}">
+    {% else %}
+    <meta property="twitter:image:src" content="{{ "/assets/img/others/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
+    {% endif %}
 
     <!-- Social: Facebook / Open Graph -->
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"> {% if page.image %}
-    <meta property="og:image" content="{{ site.url }}{{page.image }}"> {% else %}
-    <meta property="og:image" content="{{ " /assets/img/blog-image.png " | prepend: site.baseurl | prepend: site.url }}"> {% endif %}
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    {% if page.image %}
+    <meta property="og:image" content="{{ site.url }}{{page.image }}">
+    {% else %}
+    <meta property="og:image" content="{{ "/assets/img/others/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
+    {% endif %}
     <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:site_name" content="{{ site.title }}">
 
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta itemprop="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta itemprop="image" content="{{ " /assets/img/blog-image.png " | prepend: site.baseurl | prepend: site.url }}"/>
+    <meta itemprop="image" content="{{ "/assets/img/others/blog-image.png" | prepend: site.baseurl | prepend: site.url }}"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{site.baseurl}}/assets/img/icons/favicon.ico" type="image/x-icon" />
@@ -53,16 +57,24 @@
     <!-- Android Lolipop Theme Color -->
     <meta name="theme-color" content="{{ page.color }}">
 
-    <link rel="stylesheet" href="{{ " /assets/css/main.min.css " | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+    <!-- Add manifest -->
+    <link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl | prepend: site.url }}" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml
-        " | prepend: site.baseurl | prepend: site.url }}" />
+    <!-- Add Service Worker -->
+    <script type="text/javascript">
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/sw.js").then(function(registration) {
+                console.info("Service Worker registration successful with scope: ", registration.scope);
+            }).catch(function(err) {
+                console.error("Service Worker registration failed: ", err);
+            });
+        }
+    </script>
 
     {% include google-analytics.html %}
 
