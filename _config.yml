@@ -1,45 +1,28 @@
 # Site settings
-title: Wilson Junior Blog
+title: Wilson Junior - Programador
 description: Blog de um desenvolvedor de software e apaixonado por tecnologia.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://blog.wilsonjunior.net" # the base hostname & protocol for your site
 
 # User settings
 username: Wilson Junior
-tagline: Blog de Desenvolvimento
-user_description: Blog de um desenvolvedor e apaixonado por tecnologia.
+tagline: Blog de Programação
+user_description: Blog de um desenvolvedor de software e apaixonado por tecnologia.
 email: contato@wilsonjunior.net
 github_username:  wilsonjuniorwj
 facebook_username: wilsonjunior.net
 twitter_username: wilsonjuniorwj
 linkedin_username: wilsonjuniorwj
 disqus_username: wilsonjuniorwj
+gplus_username: WilsonJunior0101
 
-google-ID: 'UA-106774456-1'
-
+# Social Icons
 social:
 - {icon: 'github', link: 'https://github.com/wilsonjuniorwj'}
 - {icon: 'globe', link: 'https://wilsonjunior.net'}
 - {icon: 'envelope', link: 'mailto:contato@wilsonjunior.net'}
 - {icon: 'linkedin', link: 'https://www.linkedin.com/in/wilsonjuniorwj'}
 - {icon: 'rss-square', link: 'https://blog.wilsonjunior.net/feed.xml'}
-
-# Links to include in menu navigation
-# For external links add external: true
-links:
-  - title: Home
-    url: /..
-  - title: Tags
-    url: /tags
-  - title: Sobre
-    url: /about
-
-# Build settings
-markdown: kramdown
-highlighter: rouge
-permalink: /:title/
-plugins: [jekyll-paginate, jekyll-feed]
-paginate: 6
 
 # Display links for the previous and next post on post pages.
 display-next-prev-post: true
@@ -49,6 +32,22 @@ var_previous_post: ANTERIOR
 # website under construction
 var_website_construction: true
 
+# Google Analytics - Global Site Tag (gtag.js)
+google-ID: 'UA-106774456-1'
+
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+# path: feed.xml
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+paginate: 6
+
+# plugins
+plugins: [jekyll-paginate]
+
 # html minify
 compress_html:
   clippings: all
@@ -56,9 +55,37 @@ compress_html:
   endings: []
   profile: false
 
-# RSS 2.0 can be used instead of Atom by uncommenting following two lines
-#feed:
-path: feed.xml
+files_to_cache:
+ - '/assets/js/blog.js'
+
+pages_to_cache:
+  - '/about/'
+  - '/tags/'
+  - '/offline/index.html'
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: Tags
+    url: /tags
+  - title: Sobre
+    url: /about
 
 # exclude my node related stuff
-exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby']
+exclude: [
+  'package.json',
+  'src',
+  'node_modules',
+  'vendor/bundle/ruby',
+  'package-lock.json',
+  'README.md',
+  'gulpfile.js',
+  'initpost.sh',
+  'testlinks.sh',
+  '.travis.yml',
+  'thumbnails/'
+]
+
+include: ['_redirects', '_headers']
