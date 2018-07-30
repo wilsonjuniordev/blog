@@ -1,5 +1,6 @@
 ---
 layout: default
+color: #0870ad
 ---
 <main class="home" id="post" role="main">
 {% if site.var_website_construction == false %}
@@ -8,16 +9,32 @@ layout: default
 
   {% for post in paginator.posts %}
 
-    <article class="box-item post-{{post.main-class}}">
+    <article class="box-item post-{{post.main-class}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 
       <div class="box-body">
+        <meta itemprop="datePublished" content="{{post.date | date_to_xmlschema }}">
+        <meta itemprop="dateModified" content="{{post.date | date_to_xmlschema }}">
+        <meta itemprop="mainEntityOfPage" content="{{ post.url | prepend: site.url }}">
+
+        <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <meta itemprop="name" content="Wilson Junior">
+        </div>
+
+        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="Wilson Junior Blog">
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                <meta itemprop="url" content="https://blog.wilsonjunior.net/assets/img/icons/ms-icon-310x310.png">
+            </div>
+        </div>
+
+        <meta itemprop="image" content="{{ site.url }}{{ post.image }}">
 
         <div class="ribbon">
             <a href="{{ site.url }}{{ post.url }}">{{post.main-class}}</a>
         </div>
 
         <a class="post-link" href="{{ site.url }}{{ post.url }}">
-          <h2 class="post-title">
+          <h2 class="post-title" itemprop="name headline">
               {{ post.title }}
           </h2>
         </a>
@@ -62,7 +79,8 @@ layout: default
           "name": "Wilson Cordeiro Machado Junior",
           "sameAs": [
               "https://www.facebook.com/wilsonjunior.net",
-              "https://www.linkedin.com/in/wilsonjuniorwj/"
+              "https://www.linkedin.com/in/wilsonjuniorwj/",
+              "https://plus.google.com/+WilsonJunior0101" 
           ]
       },
       "description": "{{ site.description }}"

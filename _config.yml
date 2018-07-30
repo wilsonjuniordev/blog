@@ -69,9 +69,9 @@ links:
   - title: Home
     url: /
   - title: Tags
-    url: /tags
+    url: /tags/
   - title: Sobre
-    url: /about
+    url: /about/
 
 # exclude my node related stuff
 exclude: [
