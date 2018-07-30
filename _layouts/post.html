@@ -1,45 +1,90 @@
 ---
-layout: default
+layout: compress
 ---
 
-<h1>
-  {{ page.title }}
-</h1>
+<!DOCTYPE html>
+<html lang="pt-br" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
+  {% include head.html %}
 
-{% if page.image %}
-  <img src="{{ site.baseurl }}/assets/img/articles/{{ page.image }}" style="filter: opacity(50%) grayscale(100%);">
-{% endif %}
+  <!-- Inline css post -->
+  <style type="text/css">
+    {% include posts.css %}
+  </style>
 
-{{ content }}
+  <body>
+      {% include header.html %}
+    
+    <section class="post">
 
-{% if page.tags %}
-<div>
-  {% for tag in page.tags %}
-    <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag-link">#{{tag}}</a>
-  {% endfor %}
-</div>
-{% endif %}
+      <article role="article" id="post" class="post-content">
+        {{ content }}
+        <hr/>
+      </article>
 
-<span class="post-date">
-  {% if page.date %}
-      {% include date.html date=page.date %}
-  {% endif %}
-  por
-  {% if page.author %}
-    {{ page.author }}
-  {% else %}
-    {{ site.username }}
-  {% endif %}
-</span>
+      <!-- {% if page.tags %}
+      <div>
+        {% for tag in page.tags %}
+          <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag-link">#{{tag}}</a>
+        {% endfor %}
+      </div>
+      {% endif %} -->
 
-{% include social-sharing.html %}
+      <!-- <span class="post-date">
+        Postado por
+        {% if page.author %}
+          {{ page.author }}
+        {% else %}
+          {{ site.username }}
+        {% endif %}
+      </span> -->
 
-{% include author.html %}
+      <!-- {% include social-sharing.html %} -->
 
-{% comment %} {% include related-posts.html %} {% endcomment %}
+      {% include author.html %}
 
-{% include related-posts.html %}
+      <!-- {% comment %} {% include related-posts.html %} {% endcomment %} -->
 
-{% include next-prev-post.html %}
+      <!-- {% include related-posts.html %} -->
 
-{% include comments.html %}
+      <!-- {% include next-prev-post.html %} -->
+
+      {% include comments.html %}
+
+      {% include footer.html %}
+
+    </section>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+            },
+            "headline": "{{page.title}}",
+            "datePublished": "{{page.date}}",
+            "dateModified": "{{page.date}}",
+            "description": "{{page.description}}",
+            "image": {
+                "@type": "ImageObject",
+                "url": "{{ site.url }}{{page.image }}"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Wilson Cordeiro Machado Junior"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Wilson Junior Blog",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://blog.wilsonjunior.net/assets/img/icons/ms-icon-310x310.png"
+                }
+            },
+            "articleBody": "{{ content | strip_html | strip_newlines | replace: '"', '' }}"
+        }
+    </script>
+
+  </body>
+</html>

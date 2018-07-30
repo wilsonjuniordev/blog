@@ -1,0 +1,58 @@
+---
+layout: minimal
+title: "Tags"
+permalink: /tags/index.html
+description: "Procure os assuntos pelas tags."
+---
+
+<h2>Tags</h2>
+
+<ul class="tag-links">
+  {% for tag in site.tags %}
+    <li>
+      <a href="#{{ tag[0] | slugify }}" class="tag-link">
+        #{{ tag | first }}&nbsp;<span class="badge">{{ tag | last | size}}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+<hr>
+
+<ul class="posts">
+  {% for tag in site.tags %}
+    <h2 id="{{ tag[0] | slugify }}">#{{ tag[0] }}</h2>
+
+    {% for post in tag[1] %}
+      <li>
+        <h3>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          <p class="post-date" style="margin-top:0px">
+            <span class="read-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              {% include read-time.html %}
+            </span>
+          </p>
+        </h3>
+      </li>
+    {% endfor %}
+  {% endfor %}
+</ul>
+
+<script type="application/ld+json">
+  {
+      "@context": "http://schema.org/",
+      "@type": "WebPage",
+      "url": "https://blog.wilsonjunior.net/tags/",
+      "name": "Wilson Junior - Tags",
+      "author": {
+          "type": "Person",
+          "name": "Wilson Cordeiro Machado Junior",
+          "sameAs": [
+              "https://www.facebook.com/wilsonjunior.net",
+              "https://www.linkedin.com/in/wilsonjuniorwj/"
+          ]
+      },
+      "description": "{{ site.description }}"
+  }
+</script>

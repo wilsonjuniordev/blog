@@ -1,44 +1,70 @@
 ---
 layout: default
 ---
-
+<main class="home" id="post" role="main">
 {% if site.var_website_construction == false %}
 
+<div id="grid" class="row flex-grid">
+
   {% for post in paginator.posts %}
-  <div class="posts">
-    <h1>
-      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-    </h1>
-    {% if post.image %}
-      <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}/assets/img/articles/{{ post.image }}"></a>
-    {% endif %}
 
+    <article class="box-item post-{{post.main-class}}">
 
-    <p>
-      {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.baseurl }}{{ post.url }}">Leia mais</a>
+      <div class="box-body">
 
-      {% if site.tags %}
-      <div>
-        {% for tag in post.tags %}
-        <a href="{{ site.url }}/tags/#{{ tag | slugify }}" class="tag-link">#{{tag}}</a>
-        {% endfor %}
+        <div class="ribbon">
+            <a href="{{ site.url }}{{ post.url }}">{{post.main-class}}</a>
+        </div>
+
+        <a class="post-link" href="{{ site.url }}{{ post.url }}">
+          <h2 class="post-title">
+              {{ post.title }}
+          </h2>
+        </a>
+
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          <p class="description">{{ post.introduction }}</p>
+        </a>
+
+        <span class="read-time">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+          {% include read-time.html %}
+        </span>
+
+        <div class="tags" style="margin-top: .938rem">
+            {% for tag in post.tags %}
+                <a href="/tags/#{{tag | slugify }}">{{ tag }}</a>
+            {% endfor %}
+        </div>
+
       </div>
-      {% endif %}
 
-      <span class="post-date" style="margin-top:3px">
-        <i class="fa fa-calendar" aria-hidden="true"></i> 
-        {% include date.html date=post.date %}
-        - <i class="fa fa-clock-o" aria-hidden="true"></i> 
-        {% include read-time.html %}
-      </span>
-    </p>
-
-  </div>
+    </article>
   {% endfor %}
 
-  <!-- Pagination links -->
+</div>
+
   {% include pagination.html %}
   
 {% else %}
   {% include construction.html %}
 {% endif %}
+</main>
+
+<script type="application/ld+json">
+  {
+      "@context": "http://schema.org/",
+      "@type": "Website",
+      "url": "https://blog.wilsonjunior.net/",
+      "name": "Wilson Junior Blog",
+      "author": {
+          "type": "Person",
+          "name": "Wilson Cordeiro Machado Junior",
+          "sameAs": [
+              "https://www.facebook.com/wilsonjunior.net",
+              "https://www.linkedin.com/in/wilsonjuniorwj/"
+          ]
+      },
+      "description": "{{ site.description }}"
+  }
+</script>

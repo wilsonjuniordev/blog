@@ -27,8 +27,8 @@ social:
 # Links to include in menu navigation
 # For external links add external: true
 links:
-  - title: Arquivos
-    url: /archive
+  - title: Home
+    url: /..
   - title: Tags
     url: /tags
   - title: Sobre
@@ -39,7 +39,7 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 plugins: [jekyll-paginate, jekyll-feed]
-paginate: 5
+paginate: 6
 
 # Display links for the previous and next post on post pages.
 display-next-prev-post: true

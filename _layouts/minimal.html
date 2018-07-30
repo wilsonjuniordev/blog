@@ -6,15 +6,17 @@ layout: compress
 <html lang="pt-br" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
   {% include head.html %}
 
-  <!-- Inline css home -->
+  <!-- Inline css minimal -->
   <style type="text/css">
-    {% include home.css %}
-  </style>
+    {% include minimal.css %}
+    </style>
 
   <body>
       {% include header.html %}
-      <section class="content">
-          {{ content }}
+      <section class="container">
+          <article id="post" class="post-content" role="main" itemprop="mainContentOfPage">
+              {{ content }}
+          </article>
       </section>
       {% include footer.html %}
   </body>
