@@ -1,21 +1,23 @@
 {
-  "name": "blog",
+  "name": "https://blog.wilsonjunior.net/",
   "version": "1.0.0",
-  "description": "[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/wilsonjuniorwj/blog/master/LICENSE)",
-  "main": "index.js",
+  "description": "Blog de um desenvolvedor de software e apaixonado por tecnologia.",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "build": "gulp js && gulp jekyll-build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wilsonjuniorwj/blog.git"
-  },
-  "author": "",
+ "keywords": [
+    "programacao",
+    "blog",
+    "java",
+    "sql",
+    "git",
+    "linux",
+    "js"
+  ],
+  "author": "Willian Cordeiro Machado Junior",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wilsonjuniorwj/blog/issues"
-  },
-  "homepage": "https://github.com/wilsonjuniorwj/blog#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
