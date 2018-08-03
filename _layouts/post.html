@@ -1,28 +1,35 @@
----
-layout: compress
+--- 
+layout: compress 
 ---
 
 <!DOCTYPE html>
-<html lang="pt-br" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
-  {% include head.html %}
+<html lang="pt-br" {% if page.main-class %}class="post-{{ page.main-class }}" {% endif %}>
+{% include head.html %}
 
-  <!-- Inline css post -->
-  <style type="text/css">
-    {% include posts.css %}
-  </style>
+<!-- Inline css post -->
+<style type="text/css">
+  {% include posts.css %}
+</style>
 
-  <body>
-      {% include header.html %}
-      {% include night-mode.html %}
-    
-    <section class="post">
+<body>
+  {% include header.html %} 
+  {% include night-mode.html %}
 
-      <article role="article" id="post" class="post-content">
-        {{ content }}
-        <hr/>
-      </article>
+  <header class="header-post">
+      <div class="content">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <blockquote class="quote">{{ page.quote }}</blockquote>
+      </div>
+    </header>
 
-      <!-- {% if page.tags %}
+  <section class="post">
+
+    <article role="article" id="post" class="post-content">
+      {{ content }}
+      <hr/>
+    </article>
+
+    <!-- {% if page.tags %}
       <div>
         {% for tag in page.tags %}
           <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag-link">#{{tag}}</a>
@@ -30,7 +37,7 @@ layout: compress
       </div>
       {% endif %} -->
 
-      <!-- <span class="post-date">
+    <!-- <span class="post-date">
         Postado por
         {% if page.author %}
           {{ page.author }}
@@ -39,23 +46,22 @@ layout: compress
         {% endif %}
       </span> -->
 
-      <!-- {% include social-sharing.html %} -->
+    {% include social-sharing.html %}
 
-      {% include author.html %}
+    {% include author.html %}
 
-      <!-- {% comment %} {% include related-posts.html %} {% endcomment %} -->
+    <!-- {% comment %} {% include related-posts.html %} {% endcomment %} -->
 
-      <!-- {% include related-posts.html %} -->
+    <!-- {% include related-posts.html %} -->
 
-      <!-- {% include next-prev-post.html %} -->
+    {% include next-prev-post.html %}
 
-      {% include comments.html %}
+    {% include comments.html %} 
+    {% include footer.html %}
 
-      {% include footer.html %}
+  </section>
 
-    </section>
-
-    <script type="application/ld+json">
+  <script type="application/ld+json">
         {
             "@context": "http://schema.org/",
             "@type": "BlogPosting",
@@ -87,5 +93,6 @@ layout: compress
         }
     </script>
 
-  </body>
+</body>
+
 </html>
