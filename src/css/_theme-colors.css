@@ -1,0 +1,133 @@
+.post-java .box-body h2 {
+    color: #1a87a9
+}
+
+.post-java .box-body .tags a {
+    color: #1a87a9;
+    border: 1px solid #1a87a9;
+}
+
+.post-java .box-body .tags a:hover {
+    color: #fff;
+    background: #1a87a9
+}
+
+.post-java .box-body .ribbon a {
+    color: #fff;
+    background-image: linear-gradient( to right, #1a87a9, #1a87a95e);
+}
+
+.post-sql .box-body h2 {
+    color: #0a8c99
+}
+
+.post-sql .box-body .tags a {
+    content: 'bd';
+    color: #0a8c99;
+    border: 1px solid #0a8c99;
+}
+
+.post-sql .box-body .tags a:hover {
+    color: #fff;
+    background: #0a8c99
+}
+
+.post-sql .box-body .ribbon a {
+    color: #fff;
+    background-image: linear-gradient( to right, #0a8c99, #0a8c995e);
+}
+
+.post-git .box-body h2 {
+    color: #5f768c
+}
+
+.post-git .box-body .tags a {
+    color: #5f768c;
+    border: 1px solid #5f768c;
+}
+
+.post-git .box-body .tags a:hover {
+    color: #fff;
+    background: #5f768c
+}
+
+.post-git .box-body .ribbon a {
+    color: #fff;
+    background-image: linear-gradient( to right, #5f768c, #5f768c5e);
+}
+
+.post-linux .box-body h2 {
+    color: #816c9e
+}
+
+.post-linux .box-body .tags a {
+    color: #816c9e;
+    border: 1px solid #816c9e;
+}
+
+.post-linux .box-body .tags a:hover {
+    color: #fff;
+    background: #816c9e
+}
+
+.post-linux .box-body .ribbon a {
+    color: #fff;
+    background-image: linear-gradient( to right, #816c9e, #816c9e5e);
+}
+
+.post-diversos .box-body h2 {
+    color: #17b375
+}
+
+.post-diversos .box-body .tags a {
+    color: #17b375;
+    border: 1px solid #17b375;
+}
+
+.post-diversos .box-body .tags a:hover {
+    color: #fff;
+    background: #17b375
+}
+
+.post-diversos .box-body .ribbon a {
+    color: #fff;
+    background-image: linear-gradient( to right, #17b375, #17b3755e);
+}
+
+.post-youtube .box-body h2 {
+    color: #a02221
+}
+
+.post-youtube .box-body .tags a {
+    color: #a02221;
+    border: 1px solid #a02221;
+}
+
+.post-youtube .box-body .tags a:hover {
+    color: #fff;
+    background: #a02221
+}
+
+.post-youtube .box-body .ribbon a {
+    color: #fff;
+    background-image: linear-gradient( to right, #a02221, #a022215e);
+}
+
+.post-javascript .box-body h2 {
+    color: #ceb229
+}
+
+.post-javascript .box-body .tags a {
+    color: #ceb229;
+    border: 1px solid #ceb229;
+}
+
+.post-javascript .box-body .tags a:hover {
+    color: #fff;
+    background: #ceb229
+}
+
+.post-javascript .box-body .ribbon a {
+    color: #fff;
+    background-image: linear-gradient( to right, #ceb229, #ceb2295e);
+}

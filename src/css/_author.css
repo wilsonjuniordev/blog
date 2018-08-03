@@ -1,0 +1,86 @@
+.author {
+    display: table;
+    width: 100%;
+    margin: 2.5rem 0;
+}
+
+.author .details {
+    margin: auto;
+    max-width: 50rem;
+    padding: 0 1.25rem;
+}
+
+@media only screen and (max-width:37.5rem) {
+    .author .details {
+        text-align: center
+    }
+}
+
+.author img {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-width: 90px;
+}
+
+@media only screen and (min-width:37.5rem) {
+    .author img {
+        float: left;
+        margin-right: 1.425rem
+    }
+}
+
+.author .def {
+    color: #808080;
+    font-size: 1.125rem;
+    font-weight: 300;
+    font-style: normal;
+    margin: .625rem;
+}
+
+@media only screen and (min-width:37.5rem) {
+    .author .def {
+        margin: 0;
+    }
+}
+
+.author .name {
+    margin: 0;
+}
+
+.author .name a {
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.875rem;
+}
+
+.author .name a:hover {
+    color: #005f97
+}
+
+@media only screen and (min-width:37.5rem) {
+    .author .name a {
+        font-size: 1.563rem
+    }
+}
+
+.author .desc {
+    font-weight: 300;
+    font-style: normal;
+    margin: .625rem;
+    font-size: 1rem;
+}
+
+@media only screen and (min-width:37.5rem) {
+    .author .desc {
+        font-size: 1.25rem
+    }
+}
+
+.author .email {
+    text-decoration: none;
+    color: #005f97
+}

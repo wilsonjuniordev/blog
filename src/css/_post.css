@@ -1,0 +1,508 @@
+.header-post {
+    color: black;
+}
+
+.header-post .content {
+    margin: auto;
+    max-width: 50rem;
+    padding: 3.75rem 0
+}
+
+.header-post h1 {
+    text-align: center;
+    font-size: 1.875rem;
+    margin: 0 0 30px;
+}
+
+@media only screen and (min-width:37.5rem) {
+    .header-post h1 {
+        font-size: 3rem
+    }
+}
+
+.header-post .quote {
+    text-align: right;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.25rem
+}
+
+.header-post a,
+.header-post p {
+    /* color: #fff; */
+    text-decoration: none;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.125rem
+}
+
+.post {
+    position: relative;
+    background: #fff
+}
+
+.post-content img,
+.frame-content img {
+    max-width: 100%;
+    margin: 1.875rem auto;
+    display: block
+}
+
+.post-content p,
+.frame-content p,
+.post-content h1,
+.frame-content h1,
+.post-content h2,
+.frame-content h2,
+.post-content h3,
+.frame-content h3,
+.post-content h4,
+.frame-content h4,
+.post-content ul,
+.frame-content ul,
+.post-content ol,
+.frame-content ol,
+.post-content .tags,
+.frame-content .tags,
+.post-content iframe,
+.frame-content iframe,
+.post-content .button-post,
+.frame-content .button-post {
+    *zoom: 1;
+    width: auto;
+    max-width: 50rem;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding: 0 1.25rem;
+    /* margin: 0 auto 1.875rem; */
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 2;
+    letter-spacing: .069rem;
+}
+
+.post-content p:before,
+.frame-content p:before,
+.post-content h1:before,
+.frame-content h1:before,
+.post-content h2:before,
+.frame-content h2:before,
+.post-content h3:before,
+.frame-content h3:before,
+.post-content h4:before,
+.frame-content h4:before,
+.post-content ul:before,
+.frame-content ul:before,
+.post-content ol:before,
+.frame-content ol:before,
+.post-content .tags:before,
+.frame-content .tags:before,
+.post-content iframe:before,
+.frame-content iframe:before,
+.post-content .button-post:before,
+.frame-content .button-post:before,
+.post-content p:after,
+.frame-content p:after,
+.post-content h1:after,
+.frame-content h1:after,
+.post-content h2:after,
+.frame-content h2:after,
+.post-content h3:after,
+.frame-content h3:after,
+.post-content h4:after,
+.frame-content h4:after,
+.post-content ul:after,
+.frame-content ul:after,
+.post-content ol:after,
+.frame-content ol:after,
+.post-content .tags:after,
+.frame-content .tags:after,
+.post-content iframe:after,
+.frame-content iframe:after,
+.post-content .button-post:after,
+.frame-content .button-post:after {
+    content: '';
+    display: table
+}
+
+.post-content p:after,
+.frame-content p:after,
+.post-content h1:after,
+.frame-content h1:after,
+.post-content h2:after,
+.frame-content h2:after,
+.post-content h3:after,
+.frame-content h3:after,
+.post-content h4:after,
+.frame-content h4:after,
+.post-content ul:after,
+.frame-content ul:after,
+.post-content ol:after,
+.frame-content ol:after,
+.post-content .tags:after,
+.frame-content .tags:after,
+.post-content iframe:after,
+.frame-content iframe:after,
+.post-content .button-post:after,
+.frame-content .button-post:after {
+    clear: both
+}
+
+@media only screen and (min-width:37.5rem) {
+    .post-content p,
+    .frame-content p,
+    .post-content h1,
+    .frame-content h1,
+    .post-content h2,
+    .frame-content h2,
+    .post-content h3,
+    .frame-content h3,
+    .post-content h4,
+    .frame-content h4,
+    .post-content ul,
+    .frame-content ul,
+    .post-content ol,
+    .frame-content ol,
+    .post-content .tags,
+    .frame-content .tags,
+    .post-content iframe,
+    .frame-content iframe,
+    .post-content .button-post,
+    .frame-content .button-post {
+        font-size: 1.25rem
+    }
+}
+
+.post-content li,
+.frame-content li {
+    padding: .625rem 0;
+}
+
+.post-content li>ul,
+.frame-content li>ul {
+    margin-bottom: 0
+}
+
+.post-content p,
+.frame-content p,
+.post-content li,
+.frame-content li {
+    color: #333;
+}
+
+.post-content p code,
+.frame-content p code,
+.post-content li code,
+.frame-content li code {
+    color: #005f97;
+    word-wrap: break-word
+}
+
+.post-content a,
+.frame-content a {
+    color: #005f97;
+    border-bottom: 2px dashed #005f97;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.post-content a:hover,
+.frame-content a:hover {
+    background: #005f97;
+    color: #fff
+}
+
+.post-content .externalLink:after,
+.frame-content .externalLink:after {
+    display: inline-block;
+    content: '';
+    color: #005f97;
+    background-image: url("/assets/img/others/external.svg");
+    background-size: 100%;
+    margin-left: .313rem;
+    width: 1.125rem;
+    height: 1.125rem
+}
+
+.post-content iframe,
+.frame-content iframe {
+    margin-top: 1.875rem;
+    width: 100%
+}
+
+.post-content #twitter-widget-0,
+.frame-content #twitter-widget-0,
+.post-content .instagram-media,
+.frame-content .instagram-media,
+.post-content .twitter-tweet,
+.frame-content .twitter-tweet {
+    margin: 20px auto !important
+}
+
+.post-content h1,
+.frame-content h1,
+.post-content h2,
+.frame-content h2,
+.post-content h3,
+.frame-content h3,
+.post-content h4,
+.frame-content h4,
+.post-content h5,
+.frame-content h5 {
+    font-weight: 800;
+    font-style: normal;
+}
+
+.post-content h1,
+.frame-content h1 {
+    font-size: 1.875rem;
+    line-height: 1.4;
+}
+
+@media only screen and (min-width:37.5rem) {
+    .post-content h1,
+    .frame-content h1 {
+        font-size: 2.813rem
+    }
+}
+
+.post-content h2,
+.frame-content h2 {
+    font-size: 1.375rem;
+    line-height: 1.4;
+}
+
+@media only screen and (min-width:37.5rem) {
+    .post-content h2,
+    .frame-content h2 {
+        font-size: 2.188rem
+    }
+}
+
+.post-content h3,
+.frame-content h3 {
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+@media only screen and (min-width:37.5rem) {
+    .post-content h3,
+    .frame-content h3 {
+        font-size: 1.563rem
+    }
+}
+
+.post-content ul,
+.frame-content ul,
+.post-content ol,
+.frame-content ol {
+    padding-left: 2.5rem
+}
+
+.post-content ul.post-list,
+.frame-content ul.post-list {
+    padding: 0;
+}
+
+.post-content ul.post-list.svg-serie p,
+.frame-content ul.post-list.svg-serie p {
+    padding: 0
+}
+
+@media only screen and (max-width:37.5rem) {
+    .post-content ul.post-list,
+    .frame-content ul.post-list {
+        padding: 0 1.25rem
+    }
+}
+
+.post-content blockquote,
+.frame-content blockquote {
+    *zoom: 1;
+    width: auto;
+    max-width: 45.625rem;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: .313rem solid #005f97;
+    padding: 0 1.875rem;
+    margin: 3.125rem auto;
+}
+
+.post-content blockquote:before,
+.frame-content blockquote:before,
+.post-content blockquote:after,
+.frame-content blockquote:after {
+    content: '';
+    display: table
+}
+
+.post-content blockquote:after,
+.frame-content blockquote:after {
+    clear: both
+}
+
+@media only screen and (max-width:37.5rem) {
+    .post-content blockquote,
+    .frame-content blockquote {
+        width: 90%
+    }
+}
+
+.post-content blockquote p,
+.frame-content blockquote p {
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+@media only screen and (max-width:37.5rem) {
+    .post-content blockquote p,
+    .frame-content blockquote p {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        padding: 0
+    }
+}
+
+.post-content hr,
+.frame-content hr {
+    *zoom: 1;
+    width: auto;
+    max-width: 47.5rem;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    border: 1px solid #f2f2f2;
+    margin: 50px auto
+}
+
+.post-content hr:before,
+.frame-content hr:before,
+.post-content hr:after,
+.frame-content hr:after {
+    content: '';
+    display: table
+}
+
+.post-content hr:after,
+.frame-content hr:after {
+    clear: both
+}
+
+.post-content>table,
+.frame-content>table {
+    margin: 3.125rem auto;
+}
+
+@media only screen and (max-width:37.5rem) {
+    .post-content>table,
+    .frame-content>table {
+        display: none
+    }
+}
+
+.post-content>table th,
+.frame-content>table th,
+.post-content>table td,
+.frame-content>table td {
+    border: .125rem solid #ccc;
+    padding: .313rem
+}
+
+.post-content td>pre,
+.frame-content td>pre {
+    padding: 0;
+    margin: 0
+}
+
+.post-content td.gutter.gl,
+.frame-content td.gutter.gl {
+    padding-right: 1.563rem;
+    line-height: 1.5rem
+}
+
+.tag-title {
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2.25rem;
+    margin-top: 3.75rem;
+    *zoom: 1;
+    width: auto;
+    max-width: 50rem;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tag-title:before,
+.tag-title:after {
+    content: '';
+    display: table
+}
+
+.tag-title:after {
+    clear: both
+}
+
+@media only screen and (max-width:37.5rem) {
+    .tag-title {
+        font-size: 1.75rem;
+        margin-top: 1.25rem;
+        padding: 0 1.25rem
+    }
+}
+
+.post-list {
+    list-style: none;
+    margin: 1.563rem auto;
+}
+
+@media only screen and (max-width:37.5rem) {
+    .post-list {
+        padding: 0 1.25rem
+    }
+}
+
+.post-list a {
+    display: block;
+    border-bottom: 1px solid #dadada;
+    padding: .625rem 0;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.post-list a:hover {
+    color: #002f4c;
+    border-bottom: 1px solid #002f4c;
+    background: #fff
+}
+
+.post-list .entry-date {
+    float: right;
+}
+
+@media only screen and (max-width:37.5rem) {
+    .post-list .entry-date {
+        display: none
+    }
+}
+
+iframe[src*='ads-iframe'] {
+    display: none
+}

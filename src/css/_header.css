@@ -1,0 +1,45 @@
+html,
+body {
+    height: 100%
+}
+
+body {
+    /* left: 0;
+    right: 0; */
+    margin: auto
+}
+
+main {
+    padding-top: 5.25rem
+}
+
+.bar-header {
+    background: #fff;
+    padding: .625rem 1.25rem;
+    max-width: 64rem;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 10;
+}
+
+.bar-header a:hover {
+    color: black;
+}
+
+.bar-header-title a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #505050;
+}
+
+.bar-header-subtitle {
+    color: #999;
+    font-size: 57%;
+}
+
+@media (max-width: 30rem) {
+    .bar-header-title small,
+    .social-icons {
+        display: none;
+    }
+}

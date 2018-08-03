@@ -1,0 +1,31 @@
+.pagination {
+    overflow: hidden;
+    text-align: center;
+}
+
+.pagination a {
+    text-decoration: none;
+}
+
+.pagination-button {
+    color: #999;
+    border: 1px solid #e0e0e0;
+    margin: 0 .738rem 1.125rem;
+    padding: 15px 45px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pagination-active {
+    color: black;
+}
+
+.pagination-active:hover {
+    background-color: #e0e0e0;
+    -o-transition: 1s;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -webkit-transition: all 1s ease 0s;
+    transition: 1s;
+}

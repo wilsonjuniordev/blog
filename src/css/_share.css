@@ -1,0 +1,34 @@
+.share {
+    *zoom: 1;
+    width: auto;
+    max-width: 50rem;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 1.25rem;
+    /* padding-left: 0;
+    padding-right: 0; */
+    /* text-align: center; */
+}
+
+.share:before,
+.share:after {
+    content: '';
+    display: table
+}
+
+.share:after {
+    clear: both
+}
+
+.share svg {
+    margin: .938rem;
+    width: 35px;
+    height: 35px
+}
+
+.share a {
+    text-decoration: none;
+    border: none
+}

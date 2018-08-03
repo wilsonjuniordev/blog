@@ -1,0 +1,138 @@
+.container {
+    padding-top: 1.70rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
+}
+
+@media (max-width: 48em) {
+    .container {
+        width: 90vw;
+    }
+}
+
+.post-container {
+    margin-bottom: 4rem;
+}
+
+.posts {
+    margin-bottom: 5rem;
+    padding: 0px;
+    list-style: none;
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+a {
+    text-decoration: underline;
+    color: #333;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+a:hover {
+    color: black;
+    border-bottom: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+img.auto {
+    width: auto;
+}
+
+blockquote {
+    border-left: 0.25rem solid #ccc;
+    margin: 1.5em 10px;
+    color: #999;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote p {
+    display: inline;
+}
+
+.tag-link {
+    color: #999;
+    font-size: 1rem;
+    padding-right: 0.3rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.tag-link:hover {
+    text-decoration: none;
+    color: black;
+}
+
+ul.tag-link {
+    padding: 0px;
+    list-style: none;
+}
+
+ul.tag-link li {
+    list-style-type: none;
+    display: inline;
+}
+
+.badge {
+    background-color: #636c72;
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
+    color: #fff;
+    font-size: 0.9em;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+a:hover .badge {
+    background-color: black;
+}
+
+.tag-link .badge {
+    margin-left: -0.1em;
+    margin-right: 0.5em;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+.p-about {
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 2;
+    letter-spacing: .069rem;
+}
+
+.skill-list li {
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 2;
+    letter-spacing: .069rem;
+    list-style-type: disc;
+}

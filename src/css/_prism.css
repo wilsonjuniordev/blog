@@ -1,0 +1,186 @@
+/* PrismJS 1.15.0
+https://prismjs.com/download.html?themes#themes=prism-tomorrow&languages=markup+css+clike+javascript+c+csharp+bash+cpp+django+markup-templating+git+java+json+kotlin+php+sql+python+plsql&plugins=line-numbers */
+
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #ccc;
+    background: none;
+    font-family: 'Monaco', 'Consolas', 'Menlo', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* Code blocks */
+
+pre[class*="language-"] {
+    max-width: 48rem;
+    max-height: 30rem;
+    padding: 1rem;
+    margin: 0 auto 1.875rem;
+    overflow: auto;
+    font-size: .875rem;
+}
+
+@media only screen and (min-width:37.5rem) {
+    pre[class*="language-"] {
+        font-size: 1rem;
+    }
+}
+
+:not(pre)>code[class*="language-"],
+pre[class*="language-"] {
+    background: #282c34;
+}
+
+/* Inline code */
+
+:not(pre)>code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.attr-name {
+    color: #c5a5c5
+}
+
+.token.boolean {
+    color: #ff8b50
+}
+
+.token.tag {
+    color: #fc929e
+}
+
+.token.string {
+    color: #8dc891
+}
+
+.token.punctuation {
+    color: #5fb3b3
+}
+
+.token.function {
+    color: #79b6f2
+}
+
+.token.attr-value {
+    color: #8dc891
+}
+
+.token.keyword {
+    color: #c5a5c5
+}
+
+.token.important {
+    font-weight: 400
+}
+
+.token.bold {
+    font-weight: 700
+}
+
+.token.italic {
+    font-style: italic
+}
+
+.token.entity {
+    cursor: help
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #999
+}
+
+.token.property,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #5a9bcf
+}
+
+.token.selector,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #d8dee9
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+    color: #d7deea
+}
+
+.token.namespace {
+    color: #e2777a;
+}
+
+.token.regex {
+    color: #7ec699;
+}
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers>code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em;
+    /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.line-numbers-rows>span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows>span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+}
