@@ -17,12 +17,11 @@ disqus_username: wilsonjuniorwj
 gplus_username: WilsonJunior0101
 
 # Social Icons
-social:
-- {icon: 'github', link: 'https://github.com/wilsonjuniorwj'}
-- {icon: 'globe', link: 'https://wilsonjunior.net'}
-- {icon: 'envelope', link: 'mailto:contato@wilsonjunior.net'}
-- {icon: 'linkedin', link: 'https://www.linkedin.com/in/wilsonjuniorwj'}
-- {icon: 'rss-square', link: 'https://blog.wilsonjunior.net/feed.xml'}
+github_icon: https://github.com/wilsonjuniorwj
+earth_icon: https://wilsonjunior.net
+envelope_icon: mailto:contato@wilsonjunior.net
+linkedin_icon: https://www.linkedin.com/in/wilsonjuniorwj
+rss-square_icon: https://blog.wilsonjunior.net/feed.xml
 
 # Display links for the previous and next post on post pages.
 display-next-prev-post: true

@@ -1,7 +1,29 @@
 <footer class="footer">
-  {% for item in site.social %}
-    <a href="{{ item.link }}" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
-  {% endfor %}
+  <a href="{{ site.github_icon }}" target="_blank" title="Github">
+    <svg class="icon icon-github">
+        <use xlink:href="#icon-github"></use>
+    </svg>
+  </a>
+  <a href="{{ site.earth_icon }}" target="_blank" title="Site Pessoal">
+    <svg class="icon icon-earth">
+        <use xlink:href="#icon-earth"></use>
+    </svg>
+  </a>
+  <a href="{{ site.envelope_icon }}" target="_blank" title="Email">
+    <svg class="icon icon-envelope">
+        <use xlink:href="#icon-envelope"></use>
+    </svg>
+  </a>
+  <a href="{{ site.linkedin_icon }}" target="_blank" title="LinkedIn">
+    <svg class="icon icon-linkedin">
+        <use xlink:href="#icon-linkedin"></use>
+    </svg>
+  </a>
+  <a href="{{ site.rss-square_icon }}" target="_blank" title="Feed">
+    <svg class="icon rss-square">
+        <use xlink:href="#icon-rss-square"></use>
+    </svg>
+  </a>
   <p>
     <a href="{{ site.url }}/">
       &copy; {{ site.time | date: '%Y' }} - {{ site.username }}

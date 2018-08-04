@@ -13,6 +13,17 @@
     padding-right: 10px;
 }
 
+.menu svg {
+    fill: #999;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.menu svg:hover {
+    fill: black;
+}
+
 .social-icons {
     float: right;
 }
