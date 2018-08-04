@@ -30,7 +30,7 @@ var_next_post: PRÓXIMO
 var_previous_post: ANTERIOR
 
 # website under construction
-var_website_construction: true
+var_website_construction: false
 
 # Google Analytics - Global Site Tag (gtag.js)
 google-ID: 'UA-106774456-1'
