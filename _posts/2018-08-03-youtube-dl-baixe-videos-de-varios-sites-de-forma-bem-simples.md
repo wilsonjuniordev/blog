@@ -7,7 +7,7 @@ main-class: 'linux'
 color: '#816c9e'
 tags: [linux, youtube-dl]
 quote: >-
-    "O bom profissional não é aquele que sabe de tudo, mas aquele que se vira para descobrir o que não sabe e resolver o problema." - Autor Desconhecido
+    Imaginar é o princípio da criação. Nós imaginamos o que desejamos, queremos o que imaginamos e, finalmente, criamos aquilo que queremos." - George Bernard Shaw
 description: >-
     Baixe vídeos da internet usando apenas o terminal de um jeito bem prático, rápido e simples.
 twitter_text: >-
