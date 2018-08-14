@@ -31,7 +31,7 @@ pre[class*="language-"] {
 
 pre[class*="language-"] {
     max-width: 48rem;
-    max-height: 30rem;
+    /* max-height: 30rem; */
     padding: 1rem;
     margin: 0 auto 1.875rem;
     overflow: auto;
@@ -40,7 +40,7 @@ pre[class*="language-"] {
 
 @media only screen and (min-width:37.5rem) {
     pre[class*="language-"] {
-        font-size: 1rem;
+        /* font-size: 1rem; */
     }
 }
 

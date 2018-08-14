@@ -112,22 +112,3 @@
     color: #fff;
     background-image: linear-gradient( to right, #a02221, #a022215e);
 }
-
-.post-javascript .box-body h2 {
-    color: #ceb229
-}
-
-.post-javascript .box-body .tags a {
-    color: #ceb229;
-    border: 1px solid #ceb229;
-}
-
-.post-javascript .box-body .tags a:hover {
-    color: #fff;
-    background: #ceb229
-}
-
-.post-javascript .box-body .ribbon a {
-    color: #fff;
-    background-image: linear-gradient( to right, #ceb229, #ceb2295e);
-}
