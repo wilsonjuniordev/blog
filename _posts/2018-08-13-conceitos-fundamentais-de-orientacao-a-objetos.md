@@ -2,7 +2,7 @@
 layout: post
 date: '2018-08-13 17:40:37'
 title: "Conceitos Fundamentais de Orientação a Objetos"
-image: /assets/img/thumbnail/conceitos-fundamentais-de-orientacao-a-objetos.png
+image: /assets/img/thumbnails/conceitos-fundamentais-de-orientacao-a-objetos.png
 main-class: 'java'
 color: '#1a87a9'
 tags: [java, orientacao-a-objetos]
